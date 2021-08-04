@@ -43,7 +43,6 @@ jobs:
 
       - name: Setup Flutter ${{ matrix.flutter-version }}
         id: flutter
-        if: "!startsWith(matrix.bot, 'dart')"
         uses: DanTup/gh-actions/setup-flutter@master
         with:
           channel: ${{ matrix.flutter-version }}
@@ -52,4 +51,4 @@ jobs:
       # package:test for this step to succeed. Note that Flutter projects will
       # want to change this to 'flutter test'.
       - name: Run tests
-        run: dart test
+        run: flutter test
