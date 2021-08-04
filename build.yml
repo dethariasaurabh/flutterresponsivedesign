@@ -1,0 +1,6 @@
+targets:
+  test_reflectable:
+    builders:
+      reflectable:
+        generate_for:
+          - entry_point/main.dart
