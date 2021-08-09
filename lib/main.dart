@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,19 +35,18 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              onPressed: () => Navigator.push(context, CupertinoPageRoute(builder: (_) => StaticDesignPage())),
+              onPressed: () => Navigator.push(context,
+                  CupertinoPageRoute(builder: (_) => StaticDesignPage())),
               child: Text("Static Design"),
             ),
             ElevatedButton(
-              onPressed: () => Navigator.push(context, CupertinoPageRoute(builder: (_) => FluidDesignPage())),
-              child: Text("Fluid Design"),
-            ),
-            ElevatedButton(
-              onPressed: () => Navigator.push(context, CupertinoPageRoute(builder: (_) => ResponsiveDesignPage())),
+              onPressed: () => Navigator.push(context,
+                  CupertinoPageRoute(builder: (_) => ResponsiveDesignPage())),
               child: Text("Responsive Design"),
             ),
             ElevatedButton(
-              onPressed: () => Navigator.push(context, CupertinoPageRoute(builder: (_) => AdaptiveDesignPage())),
+              onPressed: () => Navigator.push(context,
+                  CupertinoPageRoute(builder: (_) => AdaptiveDesignPage())),
               child: Text("Adaptive Design"),
             ),
           ],
