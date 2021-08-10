@@ -28,16 +28,21 @@ Widget circualrImage({
 }
 
 // Single row
-Widget singleRow(String imageUrl, String title) {
+Widget singleRow(String imageUrl, String title,
+    {double height = 50,
+    double width = 50,
+    double radius = 50,
+    double space = 20}) {
   return Column(
     children: [
       circualrImage(
-          height: 50,
-          width: 50,
+          height: height,
+          width: width,
+          radius: radius,
           imageUrl: imageUrl,
           boxShadow: BoxShadow(color: Colors.transparent)),
       SizedBox(
-        height: 20,
+        height: space,
       ),
       Text(title)
     ],
