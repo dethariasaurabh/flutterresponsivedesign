@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 const String mainContent =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ac urna ut bibendum. Donec sapien est, pharetra a semper et, rutrum et magna. Cras ante justo, faucibus quis urna eu, mattis facilisis massa. Sed ornare nisl sit amet tortor accumsan scelerisque. Nam vitae rutrum augue. Mauris ultricies nunc a tempor commodo. Pellentesque a risus placerat, faucibus nibh et, feugiat quam. Cras eu ipsum sapien. Quisque venenatis tortor quis faucibus tincidunt. Nulla aliquet eu ligula vel ullamcorper. Suspendisse bibendum, lectus non pretium tincidunt, enim tellus pellentesque tortor, nec maximus velit odio rhoncus mauris. Morbi pellentesque ante a nisl pulvinar, ac molestie urna commodo.";
 const String subContent =
@@ -15,3 +17,44 @@ Map<String, String> hobbies = {
   "https://image.flaticon.com/icons/png/512/2971/2971990.png": "Singing",
   "https://image.flaticon.com/icons/png/512/2972/2972107.png": "Swimming",
 };
+
+const String profileImageUrl =
+    "https://cdn.mirchistatus.com/siteuploads/images/images6/2935/thumb/decent-chasmis-girls-dp-status_xlrg.jpg?time=1555320304";
+
+const List<Tab> newsTabs = [
+  Tab(
+    text: "All",
+  ),
+  Tab(
+    text: "Latest",
+  ),
+  Tab(
+    text: "Trending",
+  ),
+  Tab(
+    text: "Popular",
+  ),
+];
+
+List news = [
+  {
+    "color": Color(0xfff9e84a),
+    "text": "The Great \nBritish \nRetail \nRestructuring",
+  },
+  {
+    "color": Color(0xffe8a7b9),
+    "text": "Reality has \na starring \nrole at \nMilan",
+  },
+  {
+    "color": Color(0xfff4adac),
+    "text": 'Tapping into \nthe future of \nPhysical \nRetail',
+  },
+  {
+    "color": Color(0xffc1c0c6),
+    "text": "Most in demand \nfashion trend",
+  },
+  {
+    "color": Color(0xffaeb7b9),
+    "text": "In Paris, \nFashion Is \nReady for \nReinvention",
+  }
+];

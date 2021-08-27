@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class StaticDesignPage extends StatefulWidget {
+class ScreeenUtilDesignPage extends StatefulWidget {
   @override
-  _StaticDesignPageState createState() => _StaticDesignPageState();
+  _ScreeenUtilDesignPageState createState() => _ScreeenUtilDesignPageState();
 }
 
-class _StaticDesignPageState extends State<StaticDesignPage> {
+class _ScreeenUtilDesignPageState extends State<ScreeenUtilDesignPage> {
   late VideoPlayerController _controller;
 
   @override
@@ -31,7 +32,7 @@ class _StaticDesignPageState extends State<StaticDesignPage> {
           children: [
             _controller.value.isInitialized
                 ? Positioned(
-                    height: 350,
+                    height: 350.h,
                     width: MediaQuery.of(context).size.width,
                     child: FittedBox(
                       fit: BoxFit.cover,
@@ -48,8 +49,7 @@ class _StaticDesignPageState extends State<StaticDesignPage> {
                 return [
                   SliverAppBar(
                     backgroundColor: Colors.transparent,
-                    expandedHeight: 250,
-                    collapsedHeight: 60.0,
+                    expandedHeight: 250.h,
                     elevation: 0.0,
                     floating: true,
                     pinned: true,
@@ -57,7 +57,7 @@ class _StaticDesignPageState extends State<StaticDesignPage> {
                     flexibleSpace: LayoutBuilder(
                       builder: (context, constraints) {
                         return FlexibleSpaceBar(
-                          title: constraints.constrainHeight() <= 150
+                          title: constraints.constrainHeight() <= 150.h
                               ? AppBar(
                                   automaticallyImplyLeading: false,
                                   title: Text(
@@ -85,20 +85,20 @@ class _StaticDesignPageState extends State<StaticDesignPage> {
                       children: [
                         Container(
                           height: 100,
-                          margin: EdgeInsets.only(top: 30.0),
+                          margin: EdgeInsets.only(top: 30.h),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.vertical(
-                                top: Radius.circular(40.0),
+                                top: Radius.circular(40.r),
                               )),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: 30.0),
+                          padding: EdgeInsets.only(right: 30.w),
                           child: InkWell(
                             onTap: () {},
                             child: Container(
-                              width: 60.0,
-                              height: 60.0,
+                              width: 60.w,
+                              height: 60.h,
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   gradient: LinearGradient(colors: [
@@ -107,7 +107,7 @@ class _StaticDesignPageState extends State<StaticDesignPage> {
                                   ])),
                               child: Icon(
                                 CupertinoIcons.pencil,
-                                size: 30.0,
+                                size: 30.h,
                               ),
                             ),
                           ),
@@ -121,8 +121,8 @@ class _StaticDesignPageState extends State<StaticDesignPage> {
                         physics: NeverScrollableScrollPhysics(),
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 3,
-                          crossAxisSpacing: 4.0,
-                          mainAxisSpacing: 4.0,
+                          crossAxisSpacing: 4.w,
+                          mainAxisSpacing: 4.w,
                         ),
                         itemCount: 30,
                         padding: EdgeInsets.zero,
@@ -130,7 +130,7 @@ class _StaticDesignPageState extends State<StaticDesignPage> {
                           return Container(
                             color: Color(0xffccdbfd),
                             width: MediaQuery.of(context).size.width,
-                            margin: EdgeInsets.all(5.0),
+                            margin: EdgeInsets.all(5.r),
                             alignment: Alignment.center,
                             child: Text("Text ${index + 1}"),
                           );
